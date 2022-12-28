@@ -1,0 +1,152 @@
+/* CSS Variables */
+:root {
+    /* Color Variables */
+    --primary-color: #293462;
+    --secondary-color: #1cd6ce;
+    --tertiary-color: #fedb39;
+    --opt-color: #d61c4e;
+
+    /* BackGround Variables */
+    --n-deg: 90deg;
+    /* Above from CV */
+    /* MoRE:  */
+    --primary-lg-bg: linear-gradient(var(--n-deg), var(--primary-color), var(--secondary-color)) var(--bg-option);
+    --secondary-lg-bg: linear-gradient(var(--n-deg), var(--secondary-color), var(--tertiary-color)) var(--bg-option);
+    --tertiary-lg-bg: linear-gradient(var(--n-deg), var(--tertiary-color), var(--opt-color)) var(--bg-option);
+    --opt-lg-bg: linear-gradient(180deg, var(--primary-color), var(--opt-color)) var(--bg-option);
+
+    /* Font Size Variables */
+    --normal-fsize: 1em;
+    --primary-fsize: 1.8em;
+    --secondary-fsize: 1.1em;
+    --large-fsize: 2.3em;
+    --larger-fsize: 3.2em;
+    --largest-fsize: 4.3em;
+    --small-fsize: 0.85em;
+    --screen-fsize: 1.2vw;
+
+    /* Size Variables */
+
+    /* Miscellaneous */
+    --bg-option: no-repeat center center/cover;
+    --strong-weight: bold;
+}
+
+/* Media for Root Variables */
+
+
+/* Utility Classes */
+.d-f{
+    display: flex;
+}
+
+.f-j-center{
+    justify-content: center;
+}
+
+.f-align-center{
+    align-items: center;
+}
+
+.f-col{
+    flex-direction: column;
+}
+
+.d-g{
+    display: grid;
+}
+
+/* Colors */
+.c-prm {
+    color: var(--primary-color);
+}
+
+.c-sec {
+    color: var(--secondary-color);
+}
+
+.c-tty {
+    color: var(--tertiary-color);
+}
+
+.c-opt {
+    color: var(--opt-color);
+}
+
+.c-white {
+    color: white;
+}
+
+.c-black {
+    color: black;
+}
+
+/* BG Colors */
+.bg-prm {
+    background-color: var(--primary-color);
+}
+
+.bg-sec {
+    background-color: var(--secondary-color);
+}
+
+.bg-tty {
+    background-color: var(--tertiary-color);
+}
+
+.bg-opt {
+    background-color: var(--opt-color);
+}
+
+.blg-prm {
+    background: var(--primary-lg-bg);
+}
+
+.blg-sec {
+    background: var(--secondary-lg-bg);
+}
+
+.blg-tty {
+    background: var(--tertiary-lg-bg);
+}
+
+.blg-opt {
+    background: var(--opt-lg-bg);
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+/* Font Size */
+.sz-prm {
+    font-size: var(--primary-fsize);
+}
+
+.sz-sec {
+    font-size: var(--secondary-fsize);
+}
+
+.sz-lg {
+    font-size: var(--large-fsize);
+}
+
+.sz-lgr {
+    font-size: var(--larger-fsize);
+}
+
+.sz-lgt {
+    font-size: var(--largest-fsize);
+}
+
+.sz-sm {
+    font-size: var(--small-fsize);
+}
+
+.sz-scr {
+    font-size: var(--screen-fsize);
+}

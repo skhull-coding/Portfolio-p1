@@ -1,0 +1,119 @@
+/* Import Statements */
+
+
+/* CSS RESET FOR ALL */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: inherit;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+    border: 0;
+    outline: none;
+}
+
+*::selection,
+input::selection {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+}
+
+/* Targeted Elements */
+body {
+    font-size: var(--normal-fsize);
+}
+
+strong {
+    font-weight: var(--strong-weight);
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+textarea {
+    padding: 1px;
+}
+
+button {
+    border: 1px var(--secondary-color) solid;
+}
+
+/* Targeted Components */
+
+/* mainHeader */
+#mainHeader{
+    padding: 0 2rem;
+}
+
+#mainHeader h1{
+    margin-right: 2rem;
+}
+
+#mainHeader h1 span:last-child{
+    letter-spacing: 0.4rem;
+}
+
+/* -- mainNavBar */
+#mainNavBar {
+    padding: 2rem 1rem;
+}
+
+#mainNavBar ul {
+    gap: 1.5rem;
+}
+
+#mainNavBar ul a {
+    padding: 2rem 0.5rem;
+    position: relative;
+}
+
+#mainNavBar ul a::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background: var(--secondary-color);
+    width: 0;
+    height: 0.24rem;
+    transition: all 0.2s ease-in-out 0.1s;
+
+}
+
+#mainNavBar ul a::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: var(--secondary-color);
+    width: 0;
+    height: 0.24rem;
+    transition: all 0.2s ease-in-out;
+
+}
+
+#mainNavBar ul a:hover::before {
+    width: 100%;
+}
+
+#mainNavBar ul a:hover::after {
+    width: 100%;
+}
+
+/* mainSocialConnect */
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
