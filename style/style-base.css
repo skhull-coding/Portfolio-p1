@@ -10,7 +10,7 @@
     scroll-behavior: smooth;
     box-sizing: border-box;
     font-size: inherit;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'ZEN DOTS', sans-serif;
     font-weight: 400;
     text-decoration: none;
     list-style: none;
@@ -19,101 +19,225 @@
     outline: none;
 }
 
-*::selection,
-input::selection {
-    background-color: var(--tertiary-color);
-    color: var(--primary-color);
-}
-
 /* Targeted Elements */
 body {
-    font-size: var(--normal-fsize);
+    font-size: 1.1rem;
+    height: 300vh;
 }
 
 strong {
-    font-weight: var(--strong-weight);
+    font-weight: bold;
 }
 
-button {
-    cursor: pointer;
+/* Components */
+#mainHeader {
+    position: sticky;
+    top: 0;
+    background-color: rgb(9, 25, 44);
+    padding: var(--headerPad-p);
+    display: flex;
+    align-items: center;
+    gap: var(--header-gap-p);
 }
 
-input,
-textarea {
-    padding: 1px;
+#mainHeaderLogo {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: var(--headerLogo-gap-p);
 }
 
-button {
-    border: 1px var(--secondary-color) solid;
+#mainHeaderLogo .logo-icon {
+    font-size: calc((3 * var(--header-gap-p)) / 2);
+    color: rgb(20, 165, 165);
+    animation-name: spinLogo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    margin-right: auto;
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-/* Targeted Components */
-
-/* mainHeader */
-#mainHeader{
-    padding: 0 2rem;
+#mainHeaderLogo .logo-text {
+    font-size: calc(1 * var(--header-gap-p) / 2) !important;
+    color: aliceblue;
+    z-index: 2;
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-#mainHeader h1{
-    margin-right: 2rem;
-}
-
-#mainHeader h1 span:last-child{
-    letter-spacing: 0.4rem;
-}
-
-/* -- mainNavBar */
 #mainNavBar {
-    padding: 2rem 1rem;
+    /* display: none; */
+    color: aliceblue;
 }
 
 #mainNavBar ul {
-    gap: 1.5rem;
+    display: flex;
 }
 
-#mainNavBar ul a {
-    padding: 2rem 0.5rem;
+#mainNavBar ul li {
+    text-transform: capitalize;
+    min-width: max-content;
+}
+
+#mainNavBar ul li a {
+    padding: var(--mainNavPad-p);
+    transition: all calc(0.5 * var(--transition-t));
+    text-shadow: 0 0 calc(1 * var(--header-gap-p) / 2) rgb(128, 226, 229) ;
+}
+
+#mainNavBar ul li a:hover{
+    color: red;
+    font-size: 0.95em;
+    text-shadow: none;
+}
+
+#secondaryNavBar {
+    margin-left: auto;
+    color: aliceblue;
+    z-index: 10;
+}
+
+#secondaryNavBar ul {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    max-height: 100vh;
+    background-color: rgb(9, 25, 44);
+    left: 0;
+    top: var(--secTOP);
+    padding: 6em var(--secondary-SZ) 7em;
+    font-size: var(--secondary-SZ);
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    column-gap: 2em;
+    row-gap:calc(10 * var(--secondary-SZ));
+    border-top: 1px solid pink;
+    overflow-x: hidden;
+    /* top: 0; */
+    left: -100%;
+    /* z-index: -10; */
+    transition: all calc(3 * var(--transition-t));
+}
+
+#secondaryNavBar ul li{
     position: relative;
 }
 
-#mainNavBar ul a::before {
-    position: absolute;
+#secondaryNavBar ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    /* border: 1px pink solid; */
+    width: var(--secNWidth);
+    height: var(--secNHeight);
+    transform: skew(25deg) rotate(-30deg);
+    background-color: rgb(13, 67, 114);
+    /* border-bottom: 1px solid pink;
+    border-left: 1px solid pink; */
+    
+    box-shadow: -3em 1.5em 2em rgb(41, 58, 75, 0.5);
+    z-index: 2;
+    /* transition: all calc(1.5 * var(--transition-t)); */
+}
+#secondaryNavBar ul li a:hover{
+    transform: translateY(-2em) skew(25deg) rotate(-30deg);
+    box-shadow: -6em 3em 3em rgb(41, 58, 75);
+    /* background-color: red; */
+}
+
+#secondaryNavBar ul li a:hover::before, #secondaryNavBar ul li a:hover::after{
+    
+    background-color: teal;
+}
+
+#secondaryNavBar ul li a::before, #secondaryNavBar ul li a::after{
     content: "";
+    position: absolute;
+    background-color: rgb(13, 67, 114);
+    z-index: -1 !important;
+    /* background-color: pink; */
+    /* border: 1px pink solid; */
+}
+
+#secondaryNavBar ul li a::before{
+    top: 12.5%;
+    left: -20%;
+    width: 20%;
+    height: 100%;
+    transform: skewY(-25deg);
+    opacity: 0.6;
+    /* background-color: rgb(21, 59, 92); */
+    /* border-bottom: 1px solid pink; */
+    /* box-shadow: -0.25em 0.25em 0 rgb(37, 65, 90); */
+}
+#secondaryNavBar ul li a::after{
+    left: -10%;
+    bottom: -25%;
+    height: 25.5%;
+    width: 100%;
+    transform: skew(-65deg);
+    opacity: 0.2;
+    /* background-color: rgb(4, 37, 66); */
+    /* box-shadow: 0 0.25em 0 rgb(37, 65, 90); */
+}
+
+#secondaryNavBar ul span{
+    position: absolute;
+    height: 0;
+    width: 0;
     left: 0;
     bottom: 0;
-    background: var(--secondary-color);
-    width: 0;
-    height: 0.24rem;
-    transition: all 0.2s ease-in-out 0.1s;
-
+    /* border-left: 1px solid white; */
+    pointer-events: none;
+    background-color: teal;
+    z-index: -1;
+    transition: all calc(1 * var(--transition-t)) ease-in-out;
 }
 
-#mainNavBar ul a::after {
-    position: absolute;
-    content: "";
-    right: 0;
-    top: 0;
-    background: var(--secondary-color);
-    width: 0;
-    height: 0.24rem;
-    transition: all 0.2s ease-in-out;
-
-}
-
-#mainNavBar ul a:hover::before {
+#secondaryNavBar ul li a:hover span{
     width: 100%;
+    height: 100%;
+}
+#secondaryNavBar ul li a {
+    padding: 2em 1rem;
+    transition: all var(--transition-t);
 }
 
-#mainNavBar ul a:hover::after {
+#secondaryNavBarLines{
+    
+    width: 2.7em;
+    height: 2.3em;
+    /* border: 2px solid rgb(20, 165, 165); */
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    padding: 0.3em;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.secnavline{
+    height: 0.1em;
+    background-color: rgb(20, 165, 165);
     width: 100%;
+    transition: all var(--transition-t);
+    pointer-events: none;
 }
-
-/* mainSocialConnect */
-
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-  }
