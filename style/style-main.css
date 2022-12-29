@@ -401,7 +401,7 @@
     padding: 1em;
     background-color: var(--COLOR-17);
     box-shadow: 0 0 0.5em var(--COLOR-8);
-    gap: 1em;
+    gap: 1em !important;
     text-transform: capitalize;
 }
 
@@ -454,7 +454,7 @@
 }
 
 .projectBox .mt {
-    margin-top: auto;
+    margin-top: auto I !important;
 }
 
 /* #CONTACT */
