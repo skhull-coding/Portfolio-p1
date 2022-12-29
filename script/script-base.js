@@ -49,7 +49,7 @@ projects
     let toADD = `<div class="projectBox flex f-col"><h3 class="projectTitle">ptitle</h3>
                     <p class="projectDesc">pdesc</p>
                     <div class="languages flex f-col"><h4>languages :</h4></div>
-                    <a href="prepo" class="mt w-100"><button class="repolink w-100">Github Repo</button></a>
+                    <a href="prepo" class="p-mt w-100"><button class="repolink w-100">Github Repo</button></a>
                     <a href="pdeploy" class = "w-100"><button class="deployButton w-100">View deployment</button></a></div>`;
 
     let toClasses = document.getElementsByClassName("languages");
