@@ -1,5 +1,6 @@
 :root{
     --transition-t: 200ms;
+    --bg-option: no-repeat center center/cover;
 
     /* Header */
     --header-gap-p: 2em;
@@ -84,6 +85,28 @@
     }
 }
 
+@keyframes titleLineAnimate{
+    0%{
+        left: 0;
+        width: 30%;
+    }
+    25%{
+        
+        width: 10%;
+    }
+    50%{
+        left: 70%;
+        width: 30%;
+    }
+    75%{
+        width: 10%;
+    }
+    100%{
+        left: 0%;
+        width: 30%;
+    }
+}
+
 /* Media Queries */
 @media only screen and (max-width:1024px) {
     #mainNavBar{
@@ -112,3 +135,19 @@
     --secTOP: 9.7em;
     }
 }
+
+@media only screen and (max-width:1024px){
+    #pfpPicture{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
