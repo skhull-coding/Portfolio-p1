@@ -1,0 +1,376 @@
+/* Import Statements */
+/* Nothing Here */
+
+/* ROOT VARIABLES */
+:root {
+
+    /* COLOR */
+    --COLOR-1: rgba(0, 0, 0, 0.4);
+    --COLOR-2: rgb(9, 25, 44);
+    --COLOR-3: rgb(20, 165, 165);
+    --COLOR-4: red;
+    --COLOR-5: aliceblue;
+    --COLOR-6: rgb(128, 226, 229);
+    --COLOR-7: pink;
+    --COLOR-8: rgb(13, 67, 114);
+    --COLOR-9: teal;
+    --COLOR-10: rgb(41, 58, 75);
+    --COLOR-11: rgb(41, 58, 75, 0.5);
+    --COLOR-12: rgb(14, 24, 53);
+    --COLOR-13: white;
+    --COLOR-14: rgba(0, 0, 0, 0.7);
+    --COLOR-15: rgba(20, 188, 192, 0.15);
+    --COLOR-16: rgba(0, 0, 0, 0.85);
+    --COLOR-17: rgb(13, 67, 114, 0.6);
+    --COLOR-18: rgb(63, 188, 192);
+    --COLOR-19: aqua;
+
+
+    /* MISCELLANEOUS */
+    --TRANSITION-T: 200ms;
+    --BG-OPTION: no-repeat center center/cover;
+}
+
+/* CSS RESET FOR ALL */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: inherit;
+    font-family: 'ZEN DOTS', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+    border: 0;
+    outline: none;
+}
+
+
+/* CSS RESET FOR PLACEHOLDERS */
+*::placeholder {
+    color: var(--COLOR-3);
+    opacity: 1;
+}
+
+*:-ms-input-placeholder {
+    color: var(--COLOR-3);
+}
+
+*::-ms-input-placeholder {
+    color: var(--COLOR-3);
+}
+
+/* TARGETED ELEMENTS */
+body {
+    font-size: 1.1rem;
+}
+
+strong {
+    font-weight: bold;
+}
+
+section {
+    background-blend-mode: multiply;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* UTILITY CLASSES */
+
+.untouchable {
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.f-col {
+    flex-direction: column;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.f-ai-center {
+    align-items: center;
+}
+
+.f-ai-fstart {
+    align-content: flex-start;
+}
+
+.f-jc-center {
+    justify-content: center;
+}
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+.h-fit {
+    height: fit-content;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.mr-auto {
+    margin-right: auto;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.animate-infinite {
+    animation-iteration-count: infinite;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.w-min-max {
+    min-width: max-content;
+}
+
+.p-abs {
+    position: absolute;
+}
+
+.p-rel {
+    position: relative;
+}
+
+.p-fix {
+    position: fixed;
+}
+
+.-l-100 {
+    left: -100%;
+}
+
+/* Media Queries */
+/* MAX WIDTH 1024PX */
+@media (max-width: 1024px) {
+    #contact-1 {
+        font-size: 0.8em !important;
+    }
+
+    #contact-1 input,
+    #contact-1 textarea {
+        width: 100% !important;
+    }
+
+    #mainNavBar {
+        display: none !important;
+    }
+
+    #secondaryNavBar ul li a {
+        font-size: 0.9em;
+    }
+
+    #home .bigIntro {
+        font-size: 1.1em;
+    }
+
+    #pfpPicture {
+        display: none;
+    }
+
+    #whiteCircle {
+        display: none !important;
+    }
+
+    .aboutBox figure img {
+        width: 30vw !important;
+        height: 30vw !important;
+    }
+
+    .aboutBox {
+        font-size: 0.85em;
+    }
+
+    .aboutBox .text {
+        width: 100% !important;
+    }
+}
+
+/* MAX WIDTH 600PX */
+@media (max-width: 600px) {
+    #secondaryNavBar ul {
+        height: calc(100vh - 6.5em);
+    }
+
+    #secondaryNavBar ul li a {
+        font-size: 0.8em !important;
+    }
+
+    .sectionTitle {
+        font-size: 1.5em;
+    }
+
+    #home .bigIntro {
+        font-size: 01em;
+        padding: 1em !important;
+    }
+
+    #home .bigIntro h1 span:last-child {
+        font-size: 1.9em !important;
+    }
+
+    .aboutBox {
+        flex-direction: column-reverse;
+        font-size: 0.7em;
+    }
+
+    .aboutBox .img {
+        margin: auto;
+    }
+
+    .aboutBox figure img {
+        width: 10em !important;
+        height: 10em !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .projectBox {
+        min-width: 100% !important;
+        font-size: 0.9em !important;
+    }
+
+    .projectBox .projectTitle {
+        font-size: 1.5em !important;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 380px) {
+    #home .bigIntro {
+        font-size: 0.9em;
+        padding: 0.6em !important;
+    }
+
+    #mainHeaderLogo {
+        font-size: 0.8em;
+    }
+}
+
+/* ANIMATION KEYFRAMES */
+/* SPIN LOGO ANIMATION */
+@keyframes spinLogo {
+    0% {
+        transform: rotate(720deg) scale(2);
+    }
+
+    14% {
+        transform: rotate(450deg) scale(2.2) translate(2rem);
+    }
+
+    25% {
+        transform: rotate(800deg) scale(0.55) translate(4rem);
+    }
+
+    45% {
+        transform: rotate(360deg) scale(1.3) translate(6rem);
+    }
+
+    58% {
+        transform: rotate(365deg) scale(1.3) translate(6rem) skewX(1deg);
+    }
+
+    75% {
+        transform: rotate(45deg) scale(1.1) translate(0.2rem);
+    }
+
+    85% {
+        transform: rotate(160deg) scale(1) translateX(5rem) translateY(-3rem);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(2);
+    }
+}
+
+/* SECTION TITLE LINE ANIMATION */
+@keyframes titleLineAnimate {
+    0% {
+        left: 0;
+        width: 30%;
+    }
+
+    25% {
+
+        width: 10%;
+    }
+
+    50% {
+        left: 70%;
+        width: 30%;
+    }
+
+    75% {
+        width: 10%;
+    }
+
+    100% {
+        left: 0%;
+        width: 30%;
+    }
+}
+
+/* Maybe will use in upcoming Projects */
+/* @keyframes spinner {
+    0% {
+        transform: rotate(720deg);
+    }
+
+    14% {
+        transform: rotate(450deg);
+    }
+
+    25% {
+        transform: rotate(800deg);
+    }
+
+    45% {
+        transform: rotate(360deg);
+    }
+
+    58% {
+        transform: rotate(365deg);
+    }
+
+    75% {
+        transform: rotate(45deg);
+    }
+
+    85% {
+        transform: rotate(160deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+} */
