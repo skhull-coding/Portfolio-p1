@@ -29,6 +29,7 @@
     /* MISCELLANEOUS */
     --TRANSITION-T: 200ms;
     --BG-OPTION: no-repeat center center/cover;
+    --SM-HEIGHT: calc(100vh - 9.2em);
 }
 
 /* CSS RESET FOR ALL */
@@ -62,6 +63,24 @@
 
 *::-ms-input-placeholder {
     color: var(--COLOR-3);
+}
+
+/* CSS FOR SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--COLOR-16);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--COLOR-10);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--COLOR-6);
 }
 
 /* TARGETED ELEMENTS */
@@ -218,6 +237,10 @@ button {
 
 /* MAX WIDTH 600PX */
 @media (max-width: 600px) {
+    :root {
+        --SM-HEIGHT: calc(100vh - 8.6em);
+    }
+
     #secondaryNavBar ul {
         height: calc(100vh - 6.5em);
     }

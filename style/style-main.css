@@ -136,6 +136,8 @@
 /* MAIN */
 #mainContent {
     background-color: var(--COLOR-1);
+    height: var(--SM-HEIGHT) !important;
+    overflow: auto;
 }
 
 .sectionTitle {
@@ -166,8 +168,8 @@
 
 /* ASIDE */
 #socialMedia {
-    min-height: calc(100vh - 6.5em) !important;
-    max-height: calc(100vh - 6.5em) !important;
+    min-height: var(--SM-HEIGHT) !important;
+    max-height: var(--SM-HEIGHT) !important;
     left: -3.51em;
     padding: 1em;
     gap: 1em;
@@ -260,7 +262,7 @@
     color: var(--COLOR-13);
     background: url("../images/bg-2.jpg") var(--BG-OPTION);
     background-color: var(--COLOR-6);
-    min-height: calc(100vh - 6.2em);
+    min-height: var(--SM-HEIGHT);
 }
 
 #home .bigIntro {
