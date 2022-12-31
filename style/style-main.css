@@ -154,7 +154,8 @@
     height: 0.1em;
     background: var(--COLOR-6);
     bottom: 0;
-    animation-name: titleLineAnimate;
+    /* Commenting To Stop Animation */
+    /* animation-name: titleLineAnimate; */ 
     animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
